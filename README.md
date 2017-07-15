@@ -8,9 +8,11 @@ This cli was created for [React-Redux-Boilerplate](https://github.com/david-babu
 
 ## Quick start
 
-1. Run `npm install react.cli -g` for install react.cli.
-2. Run `react.cli make module orders` for create module.
-3. Run `react.cli make component Button` for create module.
+1. Run `npm install react.cli -g` to install react.cli.
+2. Run `react.cli make module orders` to create module.
+3. Run `react.cli make component Button` to create component.
+4. Run `react.cli remove module orders` to remove module.
+5. Run `react.cli remove component Button` to remove component.
 
 <p align="center"><img src="http://g.recordit.co/a2vPH0H3IT.gif" width="100%"></p>
 
