@@ -1,0 +1,17 @@
+{
+  "name": "reac-cli",
+  "version": "1.0.0",
+  "description": "React Command Line Interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reactjs",
+    "cli",
+    "tool",
+    "react"
+  ],
+  "author": "David Babunashvili",
+  "license": "ISC"
+}
