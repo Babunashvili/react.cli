@@ -19,5 +19,9 @@
   },
   "bin": {
     "react": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david-babunashvili/react-cli.git"
   }
 }
