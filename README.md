@@ -12,3 +12,5 @@ This cli was created for [React-Redux-Boilerplate](https://github.com/david-babu
 2. Run `react.cli make module orders` for create module.
 3. Run `react.cli make component Button` for create module.
 
+<p align="center"><img src="http://g.recordit.co/a2vPH0H3IT.gif" width="100%"></p>
+
