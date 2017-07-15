@@ -1,6 +1,6 @@
 {
-  "name": "reac-cli",
-  "version": "1.0.0",
+  "name": "react.cli",
+  "version": "1.0.1",
   "description": "React Command Line Interface",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "commander": "^2.11.0"
   },
   "bin": {
-    "react": "index.js"
+    "react.cli": "index.js"
   },
   "repository": {
     "type": "git",
