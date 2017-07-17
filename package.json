@@ -1,7 +1,7 @@
 {
-  "name": "react.cli",
-  "version": "1.0.4",
-  "description": "React Command Line Interface",
+  "name": "reactjs_cli",
+  "version": "2.0.0",
+  "description": "ReactJS Command Line Interface",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,10 +18,10 @@
     "commander": "^2.11.0"
   },
   "bin": {
-    "react.cli": "index.js"
+    "react": "index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/david-babunashvili/react-cli.git"
+    "url": "git+https://github.com/david-babunashvili/reactjs_cli.git"
   }
 }
