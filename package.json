@@ -1,5 +1,5 @@
 {
-  "name": "reactjs_cli",
+  "name": "react.cli",
   "version": "2.0.0",
   "description": "ReactJS Command Line Interface",
   "main": "index.js",
@@ -20,6 +20,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/david-babunashvili/reactjs_cli.git"
+    "url": "git+https://github.com/david-babunashvili/react.cli.git"
   }
 }
