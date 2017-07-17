@@ -2,39 +2,70 @@
 
 'use strict';
 
+var helper = require('./helper.js');
 var program = require('commander');
 var Generator = require('./Generator.js');
 var generate = new Generator();
 
-
-var makeCMD = function (type, name, options) {
-    if (type === 'module') {
-        generate.makeModule(name);
-    } else if (type === 'component') {
-        generate.makeComponent(name);
+var CMD = function (action, type, name) {
+    if (action === 'make') {
+        if (type === 'module') {
+            if (typeof name === 'undefined') {
+                helper.logger('fail', 'Missing argument [name] for `react <action> [type] [name]`.');
+            } else {
+                generate.makeModule(name);
+            }
+        } else if (type === 'component') {
+            if (typeof name === 'undefined') {
+                helper.logger('fail', 'Missing argument [name] for `react <action> [type] [name]`.');
+            } else {
+                generate.makeComponent(name);
+            }
+        } else {
+            if (typeof type !== 'undefined') {
+                helper.logger('fail', `Invalid argument '${type}'.`);
+            } else {
+                helper.logger('fail', 'Missing argument [type] for `react <action> [type] [name]`.');
+            }
+        }
+    } else if (action === 'remove') {
+        if (type === 'module') {
+            if (typeof name === 'undefined') {
+                helper.logger('fail', 'Missing argument [name] for `react <action> [type] [name]`.');
+            } else {
+                generate.removeModule(name);
+            }
+        } else if (type === 'component') {
+            if (typeof name === 'undefined') {
+                helper.logger('fail', 'Missing argument [name] for `react <action> [type] [name]`.');
+            } else {
+                generate.removeComponent(name);
+            }
+        } else {
+            if (typeof type !== 'undefined') {
+                helper.logger('fail', `Invalid argument '${type}'.`);
+            } else {
+                helper.logger('fail', 'Missing argument [type] for `react <action> [type] [name]`.');
+            }
+        }
     } else {
-        helper.logger('fail', `Invalid argument ${type}`);
+        helper.logger('fail', 'Missing or invalid argument <action> for `react <action> [type] [name]`.');
     }
 }
 
-var removeCMD = function (type, name, options) {
-    if (type === 'module') {
-        generate.removeModule(name);
-    } else if (type === 'component') {
-        generate.removeComponent(name);
-    } else {
-        helper.logger('fail', `Invalid argument ${type}`);
-    }
-}
 program
-    .version('0.1.0')
-
-program
-    .command('make [type] [name]')
-    .action(makeCMD);
-
-program
-    .command('remove [type] [name]')
-    .action(removeCMD);
+    .version('2.0.0')
+    .on('--help', function () {
+        console.log('');
+        console.log('  Examples:');
+        console.log('');
+        console.log('    $ react make component Button');
+        console.log('    $ react remove component Button');
+        console.log('    $ react make module users');
+        console.log('    $ react remove module users');
+        console.log('');
+    })
+    .command('<action> [type] [name]', 'Make/Remove specific element.')
+    .action(CMD);
 
 program.parse(process.argv);

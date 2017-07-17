@@ -1,3 +1,5 @@
+'use strict';
+
 var fs = require('fs');
 var helper = require('./helper.js');
 var template = require('./templates.js');
@@ -32,7 +34,7 @@ function Generator() {
         fs.writeFileSync(`${that.modulesDir}/${name}/actions/${name}Types.js`, '', 'utf8');
 
         // Success message
-        helper.logger('success', `Module <${name}> generated successfuly`);
+        helper.logger('success', `Module <${name}> generated successfuly.`);
     }
 
     // Make Component
@@ -52,7 +54,7 @@ function Generator() {
         fs.writeFileSync(`${that.componentsDir}/${name}/${helper.toCapitalize(name)}.scss`, template.componentScssTemplate(name), 'utf8');
 
         // Success message
-        helper.logger('success', `Component <${name}> generated successfuly`);
+        helper.logger('success', `Component <${name}> generated successfuly.`);
     }
 
     // Remove Module
