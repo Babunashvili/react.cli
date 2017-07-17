@@ -1,5 +1,5 @@
 <p align="center"><img src="https://cdn.worldvectorlogo.com/logos/react.svg" width="130"></p>
-<p align="center">react.cli</p>
+<p align="center">reactjs_cli</p>
 
 ## About Repository
 
@@ -8,11 +8,11 @@ This cli was created for [React-Redux-Boilerplate](https://github.com/david-babu
 
 ## Quick start
 
-1. Run `npm install react.cli -g` to install react.cli.
-2. Run `react.cli make module orders` to create module.
-3. Run `react.cli make component Button` to create component.
-4. Run `react.cli remove module orders` to remove module.
-5. Run `react.cli remove component Button` to remove component.
+1. Run `npm install reactjs_cli -g` to install reactjs_cli.
+2. Run `reactjs_cli make module orders` to create module.
+3. Run `reactjs_cli make component Button` to create component.
+4. Run `reactjs_cli remove module orders` to remove module.
+5. Run `reactjs_cli remove component Button` to remove component.
 
 <p align="center"><img src="http://g.recordit.co/a2vPH0H3IT.gif" width="100%"></p>
 
