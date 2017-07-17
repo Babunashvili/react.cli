@@ -1,4 +1,17 @@
+'use strict';
+
 var fs = require('fs');
+var colors = require('colors');
+
+colors.setTheme({
+    info: 'green',
+    white: 'white',
+    help: 'cyan',
+    warn: 'yellow',
+    error: 'red',
+    bgRed: 'bgRed',
+    bgGreen: 'bgGreen'
+});
 
 module.exports.toCapitalize = function (str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
@@ -26,13 +39,11 @@ module.exports.removeDirectory = function (path) {
 
 // Logger
 module.exports.logger = function (type, msg) {
-    var successColor = "\x1b[32m";
-    var failColor = "\x1b[31m";
 
     if (type === 'success') {
-        console.log(successColor, msg);
+        console.log(' success '.bgGreen.white + ' ' + msg.info);
     } else if (type === 'fail') {
-        console.log(failColor, msg);
+        console.log(' error '.bgRed.white + ' ' + msg.error);
     } else {
         console.log(msg);
     }
