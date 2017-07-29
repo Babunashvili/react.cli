@@ -16,5 +16,5 @@ This cli was created for [React-Redux-Boilerplate](https://github.com/david-babu
 6. Run `react$ remove module orders` to remove module.
 7. Run `react$ remove component Button` to remove component.
 
-<p align="center"><img src="http://g.recordit.co/a2vPH0H3IT.gif" width="100%"></p>
+<p align="center"><img src="http://g.recordit.co/6UgNmk9bEp.gif" width="100%"></p>
 
