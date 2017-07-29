@@ -18,23 +18,34 @@ module.exports.toCapitalize = function (str) {
 }
 
 module.exports.removeDirectory = function (path) {
-    fs.readdirSync(path).forEach(function (file, index) {
-        var curPath = path + "/" + file;
-        if (fs.lstatSync(curPath).isDirectory()) {
-            fs.readdirSync(curPath).forEach(function (file, index) {
-                var curSubPath = curPath + "/" + file;
-                if (fs.lstatSync(curSubPath).isDirectory()) {
-                    fs.rmdirSync(curSubPath);
-                } else {
-                    fs.unlinkSync(curSubPath);
-                }
-            });
-            fs.rmdirSync(curPath);
-        } else {
-            fs.unlinkSync(curPath);
+    try {
+        fs.readdirSync(path).forEach(function (file, index) {
+            var curPath = path + "/" + file;
+            if (fs.lstatSync(curPath).isDirectory()) {
+                fs.readdirSync(curPath).forEach(function (file, index) {
+                    var curSubPath = curPath + "/" + file;
+                    if (fs.lstatSync(curSubPath).isDirectory()) {
+                        fs.rmdirSync(curSubPath);
+                    } else {
+                        fs.unlinkSync(curSubPath);
+                    }
+                });
+                fs.rmdirSync(curPath);
+            } else {
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(path);
+        return {
+            msg: '',
+            success: true
         }
-    });
-    fs.rmdirSync(path);
+    } catch (err) {
+        return {
+            success: false,
+            msg: err.message
+        }
+    }
 }
 
 // Logger
