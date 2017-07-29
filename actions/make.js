@@ -1,3 +1,5 @@
+'use strict';
+
 const Generate = require('../generators/generator.js')
 
 module.exports = function (args, callback) {
