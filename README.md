@@ -13,7 +13,7 @@ This cli was created for [React-Redux-Boilerplate](https://github.com/david-babu
 3. Run `react$ init` to initialize project.
 4. Run `react$ make module orders` to create module.
 5. Run `react$ make component Button` to create component. 
-   * Add `-s` option for stateless component. `react$ make -s component Button` 
+  * Add `-s` option for stateless component. `react$ make -s component Button` 
 6. Run `react$ remove module orders` to remove module.
 7. Run `react$ remove component Button` to remove component.
 8. Run `react$ exit` to exit react mode.
