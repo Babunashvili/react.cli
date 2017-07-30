@@ -9,13 +9,13 @@ const init = require('./actions/init.js');
 
 vorpal
     .command('make <type> <name>')
-    .option('-sl, --stateless', 'Create Stateless component.')
+    .option('-s, --stateless', 'Create Stateless component.')
     .description('Create project component.')
     .action(make);
 
 vorpal
     .command('remove <type> <name>')
-    .description('Create project component.')
+    .description('Remove project component.')
     .action(remove);
 
 vorpal

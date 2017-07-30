@@ -13,10 +13,17 @@ colors.setTheme({
     bgGreen: 'bgGreen'
 });
 
+
+/**
+ * @param  {} str
+ */
 module.exports.toCapitalize = function (str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+/**
+ * @param  {String} path
+ */
 module.exports.removeDirectory = function (path) {
     try {
         fs.readdirSync(path).forEach(function (file, index) {
@@ -48,7 +55,10 @@ module.exports.removeDirectory = function (path) {
     }
 }
 
-// Logger
+/**
+ * @param  {String} type
+ * @param  {String} msg
+ */
 module.exports.logger = function (type, msg) {
 
     if (type === 'success') {

@@ -1,6 +1,6 @@
 {
   "name": "react.cli",
-  "version": "3.0.1",
+  "version": "3.1.2",
   "description": "ReactJS Command Line Interface",
   "main": "index.js",
   "keywords": [
