@@ -4,7 +4,10 @@ const removeDirectory = require('../helper.js').removeDirectory;
 const modulesDir = './src/app/modules';
 const componentsDir = './src/app/components';
 const logger = require('../helper.js').logger;
-
+/**
+ * @param  {Object} args
+ * @param  {Function} callback
+ */
 module.exports = function (args, callback) {
     if (args.type === 'module') {
         // Remove Module

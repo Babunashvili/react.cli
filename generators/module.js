@@ -4,10 +4,13 @@ const fs = require('fs');
 const toCapitalize = require('../helper.js').toCapitalize;
 const logger = require('../helper.js').logger;
 const removeDirectory = require('../helper.js').removeDirectory;
-const moduleTemplate = require('../templates/moduleTemplate.js')
-const reducerTemplate = require('../templates/reducerTemplate.js')
+const moduleTemplate = require('../templates/moduleTemplate.js');
+const reducerTemplate = require('../templates/reducerTemplate.js');
 const modulesDir = './src/app/modules';
 
+/**
+ * @param  {String} name
+ */
 module.exports = function (name) {
     name = name.toLowerCase();
     // create modules directory if not exists

@@ -9,6 +9,10 @@ const componentScssTemplate = require('../templates/componentScssTemplate.js')
 const componentStatelessTemplate = require('../templates/componentStatelessTemplate.js')
 const componentsDir = './src/app/components';
 
+/**
+ * @param  {String} name
+ * @param  {Boolan} stateless=false
+ */
 module.exports = function (name, stateless = false) {
     name = toCapitalize(name)
     // create components directory if not exists
