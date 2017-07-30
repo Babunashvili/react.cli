@@ -15,7 +15,7 @@ vorpal
 
 vorpal
     .command('remove <type> <name>')
-    .description('Create project component.')
+    .description('Remove project component.')
     .action(remove);
 
 vorpal
